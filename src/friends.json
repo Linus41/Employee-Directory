@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "name": "Linus",
+    "department": "Coffee",
+    "location": "Tucson"
+  },
+  {
+    "id": 2,
+    "name": "Rachel",
+    "department": "Social Work",
+    "location": "Phoenix"
+  },
+  {
+    "id": 3,
+    "name": "Kevin",
+    "department": "Coffee",
+    "location": "Tucson"
+  },
+  {
+    "id": 4,
+    "name": "Lady",
+    "department": "Sleeping",
+    "location": "Tampa"
+  },
+  {
+    "id": 5,
+    "name": "Eric",
+    "department": "Art",
+    "location": "Moscow"
+  },
+  {
+    "id": 6,
+    "name": "Brittany",
+    "department": "Music",
+    "location": "Tucson"
+  },
+  {
+    "id": 7,
+    "name": "Tristan Jemsek",
+    "department": "Music",
+    "location": "Flagstaff"
+  },
+  {
+    "id": 8,
+    "name": "Joanna Cowan",
+    "image": "http://www.joannacowanlmt.com/wp-content/uploads/2015/05/DSC_3393-fixed.jpg",
+    "occupation": "Ladies Man",
+    "location": "Aron City"
+  },
+  {
+    "id": 9,
+    "name": "Tommy Pickles",
+    "image": "https://vignette4.wikia.nocookie.net/uncyclopedia/images/e/e4/Tommy_Pickles.png/revision/latest?cb=20110530102641",
+    "occupation": "Adventurer",
+    "location": "California"
+  },
+  {
+    "id": 10,
+    "name": "Rocko",
+    "image": "http://vignette3.wikia.nocookie.net/rockosmodernlife/images/9/9e/Rockos-modern-life-4e582a8f06a41.png/revision/latest?cb=20130522173416",
+    "occupation": "Cashier",
+    "location": "O-Town, California"
+  },
+  {
+    "id": 11,
+    "name": "Captain Planet",
+    "image": "http://vignette2.wikia.nocookie.net/dragon-rap-battles/images/b/b6/Captain_Planet.png/revision/latest?cb=20160911200836",
+    "occupation": "Superhero",
+    "location": "Earth"
+  },
+  {
+    "id": 12,
+    "name": "Ickis",
+    "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
+    "occupation": "Ahhhh! A Real Monster!",
+    "location": "Under a City Dump"
+  }
+]
