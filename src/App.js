@@ -3,7 +3,7 @@ import EmployeeCard from "./components/EmployeeCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import employees from "./employees.json";
-import InputForm from "./components/InputForm"
+import SearchBy from "./components/SearchBy"
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -11,12 +11,6 @@ class App extends Component {
     employees
   };
 
-  // removeEmployee = id => {
-  //   // Filter this.state.friends for friends with an id not equal to the id being removed
-  //   const employees = this.state.employees.filter(employee => employee.id !== id);
-  //   // Set this.state.friends equal to the new friends array
-  //   this.setState({ employees });
-  // };
   //render a form for user filtering
   // searchEmployee = id => {
   //   const lastName = this.state.InputForm.filter(employee => employee.)
@@ -28,10 +22,10 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Employee Directory</Title>
-        {/* {this.state.employee.map} */}
-        <InputForm>
-    
-        </InputForm>
+
+        <SearchBy employees = {this.state.employees}>
+          
+        </SearchBy>
         {this.state.employees.map(employee => (
           <EmployeeCard
             // removeFriend={this.removeFriend}
@@ -43,7 +37,7 @@ class App extends Component {
             location={employee.location}
           />
         ))}
-        
+
       </Wrapper>
     );
   }
