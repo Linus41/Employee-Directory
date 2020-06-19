@@ -1,39 +1,49 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
 
-// const uniqueDept = [];
-// console.log(uniqueDept);
 
-function SearchBy(props) {
-    return (
-        // filter by name
-        <div className="searchBy">
-            <h4>Search:</h4>
-            <form>
-                <label>By Name:</label>
-                <select>
-                    <option></option>
-                    {props.employees.map(employee => (
-                        <option>{employee.name}</option>
-                    ))};
-                    
-                </select>
-            </form>
-            <form>
-                <label>By Department:</label>
-                <select>
-                    {/* trying to take the duplicates out of the department array, but is there a department array??
-                    Need to push to global array from here, then use set ?*/}
-                   <option></option>
-                   
-                        {/* {props.employees.map(employee => (
-                        <option>{uniqueDept.push(employee.name.toString())}</option> */}
+class SearchBy extends Component {
+    state = {
+        department: 0
+    }
+    render() {
+        const department = [];
+
+        (this.props.employees.forEach(employee => {
+            department.push(employee.department)
+        }))
+        const unique = Array.from(new Set(department));
+
+        return (
+            // filter by name
+            <div className="searchBy" >
+                <h4>Search:</h4>
+                <form>
+                    <label>By Name:</label>
+                    <select>
+                        <option></option>
+                        {this.props.employees.map(employee => (
+                            <option>{employee.name}</option>
                         ))};
-                    
+
                 </select>
-            </form>
-        </div>
-    );
+                </form>
+                <form>
+                    <label>By Department:</label>
+                    <select>
+                        <option></option>
+                        {unique.map(department => (
+                            <option>{department}</option>
+                        ))};
+
+
+
+                    </select>
+                </form>
+            </div>
+        );
+
+    }
 }
 
 export default SearchBy; 
