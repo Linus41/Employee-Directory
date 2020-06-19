@@ -11,30 +11,29 @@ class App extends Component {
     employees
   };
 
-  //render a form for user filtering
-  // searchEmployee = id => {
-  //   const lastName = this.state.InputForm.filter(employee => employee.)
-  // }
-  //put in filters here: by name, by category, by department
+  handleChange = event => {
+    let name = event.target.name;
+    this.setState({
+      [name]: name
+    });
+  };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
         <Title>Employee Directory</Title>
-
-        <SearchBy employees = {this.state.employees}>
-          
-        </SearchBy>
+        
+        <SearchBy employees={this.state.employees}></SearchBy>
         {this.state.employees.map(employee => (
           <EmployeeCard
-            // removeFriend={this.removeFriend}
             id={employee.id}
             key={employee.id}
             name={employee.name}
             image={employee.image}
             department={employee.department}
             location={employee.location}
+            
           />
         ))}
 

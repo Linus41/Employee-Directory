@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
-//create global variable that filters departments and then use it in by department code
-const uniqueDept = [];
-console.log(uniqueDept);
+
+// const uniqueDept = [];
+// console.log(uniqueDept);
 
 function SearchBy(props) {
     return (
@@ -26,8 +26,8 @@ function SearchBy(props) {
                     Need to push to global array from here, then use set ?*/}
                    <option></option>
                    
-                        {props.employees.map(department => (
-                        <option>{uniqueDept.push(department.department)}</option>
+                        {/* {props.employees.map(employee => (
+                        <option>{uniqueDept.push(employee.name.toString())}</option> */}
                         ))};
                     
                 </select>
