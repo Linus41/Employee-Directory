@@ -10,12 +10,15 @@ class App extends Component {
   state = {
     employees
   };
-
+  
   handleChange = event => {
-    let name = event.target.name;
-    this.setState({
-      [name]: name
-    });
+    const department = event.target.value
+    console.log(department)
+    //should change the state to only include employees with selected department 
+    // this.setState({
+    //   employees: department
+    // });
+    
   };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
@@ -24,7 +27,9 @@ class App extends Component {
       <Wrapper>
         <Title>Employee Directory</Title>
         
-        <SearchBy employees={this.state.employees}></SearchBy>
+        <SearchBy 
+        onChange={this.handleChange}
+        employees={this.state.employees}></SearchBy>
         {this.state.employees.map(employee => (
           <EmployeeCard
             id={employee.id}

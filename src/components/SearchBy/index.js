@@ -3,9 +3,19 @@ import "./style.css";
 
 
 class SearchBy extends Component {
-    state = {
-        department: 0
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentDept: []
+        }
+
     }
+    //map in this function to return only the selected department
+    // handleDeptChange(event) {
+    //     this.setState({
+    //         currentDept: event.target.value
+    //     });
+    // }
     render() {
         const department = [];
 
@@ -30,7 +40,8 @@ class SearchBy extends Component {
                 </form>
                 <form>
                     <label>By Department:</label>
-                    <select>
+                    <select
+                       >
                         <option></option>
                         {unique.map(department => (
                             <option>{department}</option>
