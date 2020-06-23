@@ -14,10 +14,10 @@ class App extends Component {
   handleChange = event => {
     const department = event.target.value
     console.log(department)
-    //should change the state to only include employees with selected department 
-    // this.setState({
-    //   employees: department
-    // });
+    // should change the state to only include employees with selected department 
+    this.setState({
+      employees: department
+    });
     
   };
 
@@ -30,6 +30,7 @@ class App extends Component {
         <SearchBy 
         onChange={this.handleChange}
         employees={this.state.employees}></SearchBy>
+        
         {this.state.employees.map(employee => (
           <EmployeeCard
             id={employee.id}

@@ -41,6 +41,7 @@ class SearchBy extends Component {
                 <form>
                     <label>By Department:</label>
                     <select
+                    onChange={this.props.onChange}
                        >
                         <option></option>
                         {unique.map(department => (
