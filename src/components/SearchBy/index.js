@@ -30,7 +30,8 @@ class SearchBy extends Component {
                 <h4>Search:</h4>
                 <form>
                     <label>By Name:</label>
-                    <select>
+                    <select
+                    onChange={this.props.employeeName}>
                         <option></option>
                         {this.props.employees.map(employee => (
                             <option>{employee.name}</option>
@@ -41,7 +42,7 @@ class SearchBy extends Component {
                 <form>
                     <label>By Department:</label>
                     <select
-                    onChange={this.props.onChange}
+                    onChange={this.props.deptChange}
                        >
                         <option></option>
                         {unique.map(department => (

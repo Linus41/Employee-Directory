@@ -8,15 +8,27 @@ import SearchBy from "./components/SearchBy"
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    employees
+    employees,
+    department: "",
+    employeeName: ""
   };
   
-  handleChange = event => {
+  handleDeptChange = event => {
     const department = event.target.value
     console.log(department)
     // should change the state to only include employees with selected department 
     this.setState({
-      employees: department
+      department: department
+    });
+    
+  };
+
+  handleEmpChange = event => {
+    const employeeName = event.target.value
+    console.log(employeeName)
+    // should change the state to only include employees with selected department 
+    this.setState({
+      employeeName: employeeName
     });
     
   };
@@ -28,7 +40,8 @@ class App extends Component {
         <Title>Employee Directory</Title>
         
         <SearchBy 
-        onChange={this.handleChange}
+        deptChange={this.handleDeptChange}
+        employeeName={this.handleEmpChange}
         employees={this.state.employees}></SearchBy>
         
         {this.state.employees.map(employee => (
