@@ -9,50 +9,58 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     employees,
-    department: "",
-    employeeName: ""
-  };
-  
-  handleDeptChange = event => {
-    const department = event.target.value
-    console.log(department)
-    // should change the state to only include employees with selected department 
-    this.setState({
-      department: department
-    });
-    
+    filterEmployees: employees
   };
 
-  handleEmpChange = event => {
-    const employeeName = event.target.value
-    console.log(employeeName)
-    // should change the state to only include employees with selected department 
-    this.setState({
-      employeeName: employeeName
-    });
-    
-  };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  //takes in a filter, then applies it to a filterEmployees function
+  handleFilterChange = event => {
+    const name = event.target.value
+    //loop through all employees
+    const filterList = this.state.employees.filter(item => {
+      console.log(item)
+      let values = Object.values(item)
+        .join("")
+        .toLowerCase();
+      return values.indexOf(name.toLowerCase()) !== -1;
+    })
+    console.log(filterList)
+    this.setState({
+      filterEmployees: filterList
+    })
+
+  }
+
+
+
+  //takes the current filter in state and stores employees affected by that filter and renders them somehow
+  // filterEmployees = () => {
+  //   const revised = this.state.filterEmployees
+  //   this.setState(revised)
+  // }
+
+
   render() {
     return (
       <Wrapper>
         <Title>Employee Directory</Title>
-        
-        <SearchBy 
-        deptChange={this.handleDeptChange}
-        employeeName={this.handleEmpChange}
-        employees={this.state.employees}></SearchBy>
-        
-        {this.state.employees.map(employee => (
+
+        <SearchBy
+
+          employees={this.state.employees}
+          onChange={this.handleFilterChange}></SearchBy>
+
+
+
+        {/* for every employee, render a card with this info */}
+        {this.state.filterEmployees.map(employee => (
           <EmployeeCard
-            id={employee.id}
-            key={employee.id}
             name={employee.name}
             image={employee.image}
             department={employee.department}
             location={employee.location}
-            
+          // onChange={this.handleChange}
+
           />
         ))}
 

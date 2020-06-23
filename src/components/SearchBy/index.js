@@ -10,12 +10,7 @@ class SearchBy extends Component {
         }
 
     }
-    //map in this function to return only the selected department
-    // handleDeptChange(event) {
-    //     this.setState({
-    //         currentDept: event.target.value
-    //     });
-    // }
+  
     render() {
         const department = [];
 
@@ -31,7 +26,7 @@ class SearchBy extends Component {
                 <form>
                     <label>By Name:</label>
                     <select
-                    onChange={this.props.employeeName}>
+                    onChange={this.props.onChange}>
                         <option></option>
                         {this.props.employees.map(employee => (
                             <option>{employee.name}</option>
@@ -42,7 +37,7 @@ class SearchBy extends Component {
                 <form>
                     <label>By Department:</label>
                     <select
-                    onChange={this.props.deptChange}
+                    onChange={this.props.onChange}
                        >
                         <option></option>
                         {unique.map(department => (

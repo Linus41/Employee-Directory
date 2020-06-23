@@ -2,6 +2,9 @@ import React from "react";
 import "./style.css";
 
 function EmployeeCard(props) {
+  // if(this.state.employeeName === props.name || this.state.department === props.department) {
+
+  // }
   return (
     <div className="card">
       <div className="img-container">
