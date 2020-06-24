@@ -15,7 +15,7 @@ class App extends Component {
 
   //takes in a filter, then applies it to a filterEmployees function
   handleFilterChange = event => {
-    const name = event.target.value
+    let name = event.target.value
     //loop through all employees
     const filterList = this.state.employees.filter(item => {
       console.log(item)
@@ -28,42 +28,32 @@ class App extends Component {
     this.setState({
       filterEmployees: filterList
     })
+    //reset other menu field to clear? or clear filterEmployees state?
 
   }
-
-
-
-  //takes the current filter in state and stores employees affected by that filter and renders them somehow
-  // filterEmployees = () => {
-  //   const revised = this.state.filterEmployees
-  //   this.setState(revised)
-  // }
-
 
   render() {
     return (
       <Wrapper>
-        <Title>Employee Directory</Title>
+      
+          <Title>Employee Directory</Title>
 
-        <SearchBy
+          <SearchBy
 
-          employees={this.state.employees}
-          onChange={this.handleFilterChange}></SearchBy>
+            employees={this.state.employees}
+            onChange={this.handleFilterChange}></SearchBy>
 
 
 
-        {/* for every employee, render a card with this info */}
-        {this.state.filterEmployees.map(employee => (
-          <EmployeeCard
-            name={employee.name}
-            image={employee.image}
-            department={employee.department}
-            location={employee.location}
-          // onChange={this.handleChange}
-
-          />
-        ))}
-
+          {/* for every employee, render a card with this info */}
+          {this.state.filterEmployees.map(employee => (
+            <EmployeeCard
+              name={employee.name}
+              image={employee.image}
+              department={employee.department}
+              location={employee.location}
+            />
+          ))}
       </Wrapper>
     );
   }

@@ -10,7 +10,7 @@ class SearchBy extends Component {
         }
 
     }
-  
+
     render() {
         const department = [];
 
@@ -21,34 +21,37 @@ class SearchBy extends Component {
 
         return (
             // filter by name
+
             <div className="searchBy" >
-                <h4>Search:</h4>
-                <form>
-                    <label>By Name:</label>
-                    <select
-                    onChange={this.props.onChange}>
-                        <option></option>
-                        {this.props.employees.map(employee => (
-                            <option>{employee.name}</option>
-                        ))};
+                <div className="col-md-6">
+                    <form>
+                        <label>By Name:&nbsp;</label>
+                        <select
+                            onChange={this.props.onChange}>
+                            <option></option>
+                            {this.props.employees.map(employee => (
+                                <option>{employee.name}</option>
+                            ))};
 
-                </select>
-                </form>
-                <form>
-                    <label>By Department:</label>
-                    <select
-                    onChange={this.props.onChange}
-                       >
-                        <option></option>
-                        {unique.map(department => (
-                            <option>{department}</option>
-                        ))};
+                        </select>
 
-
-
-                    </select>
-                </form>
+                    </form>
+                </div>
+                <div className="col-md-6">
+                    <form>
+                        <label>By Department: &nbsp;</label>
+                        <select
+                            onChange={this.props.onChange}
+                        >
+                            <option></option>
+                            {unique.map(department => (
+                                <option>{department}</option>
+                            ))};
+                        </select>
+                    </form>
+                </div>
             </div>
+
         );
 
     }
