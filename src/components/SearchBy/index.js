@@ -23,7 +23,7 @@ class SearchBy extends Component {
             // filter by name
 
             <div className="searchBy" >
-                <div className="col-md-6">
+                <div className="col-sm-5">
                     <form>
                         <label>By Name:&nbsp;</label>
                         <select
@@ -37,9 +37,12 @@ class SearchBy extends Component {
 
                     </form>
                 </div>
-                <div className="col-md-6">
+                <div className="col-sm-2">
+                    <h1 id="or">~OR~</h1>
+                </div>
+                <div className="col-sm-5">
                     <form>
-                        <label>By Department: &nbsp;</label>
+                        <label> By Job: &nbsp;</label>
                         <select
                             onChange={this.props.onChange}
                         >

@@ -1,7 +1,6 @@
 .searchBy {
   width: 100%;
   font-size: 3rem;
-  text-decoration: underline;
   color: #2A77AE;
   margin-bottom: 50px;
   display: flex;
@@ -50,4 +49,22 @@ label {
 
 select {
   background-color: wheat;
+}
+
+h1 {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+#or {
+  letter-spacing: 5px;
+}
+
+select, option {
+  width: 240px;
+}
+
+.col-sm-5, .col-sm-2 {
+  margin-top: 20px;
 }

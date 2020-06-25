@@ -4,6 +4,7 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import employees from "./employees.json";
 import SearchBy from "./components/SearchBy"
+import Search from "./components/Search";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -36,8 +37,8 @@ class App extends Component {
     return (
       <Wrapper>
       
-          <Title>Employee Directory</Title>
-
+          <Title>Friend Directory</Title>
+          <Search>Search:</Search>
           <SearchBy
 
             employees={this.state.employees}
