@@ -1,6 +1,6 @@
 # Project Description
 
-This project is a directory of friends that sorts "friend cards" by name or job. Friends' information can be modified in the 
+This project is a directory of friends that sorts "friend cards" by name or job, when either is clicked by user in a dropdown menu. Friends' information can be modified in the "friends.json" file.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
