@@ -1,58 +1,54 @@
 import React, { Component } from "react";
-import EmployeeCard from "./components/EmployeeCard";
+import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import employees from "./employees.json";
+import friends from "./friends.json";
 import SearchBy from "./components/SearchBy"
 import Search from "./components/Search";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
-    employees,
-    filterEmployees: employees
+    friends,
+    filterFriends: friends
   };
 
-
-  //takes in a filter, then applies it to a filterEmployees function
   handleFilterChange = event => {
+    //name holds onChange value from dropdown menu in SearchBy
     let name = event.target.value
-    //loop through all employees
-    const filterList = this.state.employees.filter(item => {
-      console.log(item)
+    //filter through friends list to find name or department that matches target
+    const filterList = this.state.friends.filter(item => {
       let values = Object.values(item)
         .join("")
         .toLowerCase();
       return values.indexOf(name.toLowerCase()) !== -1;
     })
-    console.log(filterList)
+    //set filter in state to new filtered list
     this.setState({
-      filterEmployees: filterList
+      filterFriends: filterList
     })
-    //reset other menu field to clear? or clear filterEmployees state?
-
   }
 
+//render all components with props
   render() {
     return (
       <Wrapper>
       
-          <Title>Friend Directory</Title>
+          <Title>Friend &nbsp;Directory</Title>
           <Search>Search:</Search>
           <SearchBy
 
-            employees={this.state.employees}
+            friends={this.state.friends}
             onChange={this.handleFilterChange}></SearchBy>
 
 
 
-          {/* for every employee, render a card with this info */}
-          {this.state.filterEmployees.map(employee => (
-            <EmployeeCard
-              name={employee.name}
-              image={employee.image}
-              department={employee.department}
-              location={employee.location}
+          {/* render filtered friends from state, renders all friends on load before filter is applied */}
+          {this.state.filterFriends.map(friend => (
+            <FriendCard
+              name={friend.name}
+              image={friend.image}
+              department={friend.department}
+              location={friend.location}
             />
           ))}
       </Wrapper>

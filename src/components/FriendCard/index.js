@@ -1,10 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function EmployeeCard(props) {
-  // if(this.state.employeeName === props.name || this.state.department === props.department) {
-
-  // }
+function FriendCard(props) {
   return (
     <div className="card">
       <div className="img-container">
@@ -28,4 +25,4 @@ function EmployeeCard(props) {
   );
 }
 
-export default EmployeeCard;
+export default FriendCard;

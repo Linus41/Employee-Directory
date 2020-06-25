@@ -1,83 +1,71 @@
 [
   {
-    "id": 1,
     "name": "Linus",
     "department": "Coffee",
     "location": "Tucson",
     "image": "https://i.imgur.com/zj0Tsta.jpg"
   },
   {
-    "id": 2,
     "name": "Rachel",
     "department": "Social Work",
     "location": "Phoenix",
     "image": "https://i.imgur.com/8bCKI6C.jpg"
   },
   {
-    "id": 3,
     "name": "Kevin",
     "department": "Coffee",
     "location": "Tucson",
     "image": "https://i.imgur.com/Vhd3Krg.jpg"
   },
   {
-    "id": 4,
     "name": "Lady",
     "department": "Sleeping",
     "location": "Tampa",
     "image": "https://i.imgur.com/H4Y3RhH.jpg"
   },
   {
-    "id": 5,
     "name": "Eric",
     "department": "Art",
     "location": "Moscow",
     "image": "https://i.imgur.com/9iPF89m.jpg"
   },
   {
-    "id": 6,
     "name": "Brittany",
     "department": "Music",
     "location": "Tucson",
     "image": "https://i.imgur.com/vHbsVJd.jpg"
   },
   {
-    "id": 7,
     "name": "Tristan Jemsek",
     "department": "Music",
     "location": "Flagstaff",
     "image": "https://i.imgur.com/wW1FFZE.jpg"
   },
   {
-    "id": 8,
     "name": "Joanna Cowan",
     "department": "Wellness",
     "location": "Portland",
     "image": "https://i.imgur.com/KypweFo.jpg"
   },
   {
-    "id": 9,
     "name": "Karl Blau",
     "department": "Music",
     "location": "Anacortes",
     "image": "https://i.imgur.com/Kka6dOa.jpg"
   },
   {
-    "id": 10,
     "name": "Ed Schief",
     "department": "Music",
     "location": "Phoenix",
     "image": "https://i.imgur.com/tTNMSNo.jpg"
   },
   {
-    "id": 11,
     "name": "Kerry Wallis",
     "department": "Wellness",
     "location": "Tucson",
     "image": "https://i.imgur.com/WutBaYN.jpg"
   },
   {
-    "id": 12,
     "name": "Brady McDonald",
     "department": "Coffee",
     "location": "Olympia",

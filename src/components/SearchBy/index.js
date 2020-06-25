@@ -8,33 +8,29 @@ class SearchBy extends Component {
         this.state = {
             currentDept: []
         }
-
     }
 
     render() {
         const department = [];
 
-        (this.props.employees.forEach(employee => {
-            department.push(employee.department)
+        (this.props.friends.forEach(friend => {
+            department.push(friend.department)
         }))
         const unique = Array.from(new Set(department));
 
         return (
             // filter by name
-
             <div className="searchBy" >
                 <div className="col-sm-5">
                     <form>
-                        <label>By Name:&nbsp;</label>
+                        <label>By Name:&nbsp;&nbsp;</label>
                         <select
                             onChange={this.props.onChange}>
                             <option></option>
-                            {this.props.employees.map(employee => (
-                                <option>{employee.name}</option>
+                            {this.props.friends.map(friend => (
+                                <option>{friend.name}</option>
                             ))};
-
                         </select>
-
                     </form>
                 </div>
                 <div className="col-sm-2">
@@ -54,9 +50,7 @@ class SearchBy extends Component {
                     </form>
                 </div>
             </div>
-
         );
-
     }
 }
 
